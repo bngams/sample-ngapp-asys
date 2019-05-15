@@ -1,0 +1,17 @@
+.space {
+    /* This fills the remaining space, by using flexbox. 
+       Every toolbar row uses a flexbox row layout. */
+    flex: 1;
+}
+
+.menu-link {
+    margin: 0 15px;
+    cursor: pointer;
+}
+.menu-link:hover {  
+    font-weight: bolder;
+}
+
+.my-active-class {
+    text-decoration: underline;
+}

@@ -1,0 +1,41 @@
+<div style="text-align:center">
+  <h1>
+    <!-- interpolation -->
+    Welcome to {{ title }}!
+  </h1>
+  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+
+  <!-- property binding -->
+  <button [disabled]="isBtnDisabled() ? 'disabled' : ''">
+    Disabled
+  </button>
+
+  <!-- event binding -->
+  <button (click)="btnClic($event)">
+    Click me!
+  </button>
+
+  <!-- pipes -->
+  <p>My app name is {{ title | uppercase }}</p>
+  <p>Date: {{ date | date:'dd/MM/yyyy'}}</p>
+
+  <!-- directives -->
+  <!-- attributs: ngClass, ngStyle, etc... -->
+  <!-- class="class1 class2" -->
+  <p [ngClass]="getObjectClasses()">Lorem ipsum...</p>
+
+  <!-- structure -->
+  <p *ngIf="false">Ngif text</p>
+  <p [hidden]="true">Hidden text</p>
+
+  <ul>
+    <ng-container *ngFor="let p of products">
+      <li class="name">{{ p.name }}</li>
+      <li class="price">{{ p.price }}</li>
+    </ng-container>
+  </ul>
+
+  <button #myBtn>Test</button>
+  {{ myBtn.innerText }}
+
+</div>
