@@ -24,7 +24,6 @@ import { SharedModule } from './modules/shared/shared.module';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    EventModule,
     SharedModule,
   ],
   exports: [

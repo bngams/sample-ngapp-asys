@@ -1,3 +1,18 @@
-<p>
-  event-card works!
-</p>
+<mat-card class="event-card">
+  <mat-card-header>
+    <mat-card-title>{{ event.name }}</mat-card-title>
+    <mat-card-subtitle>{{ event.category }}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="https://via.placeholder.com/300" alt="Photo of event">
+  <mat-card-content>
+    <p>
+      The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+      bred for hunting.
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button>LIKE</button>
+    <button mat-button>SHARE</button>
+  </mat-card-actions>
+</mat-card>

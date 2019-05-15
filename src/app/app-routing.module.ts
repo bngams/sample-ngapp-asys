@@ -7,7 +7,8 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 const routes: Routes = [
   { path: 'home', component: HomeComponent }, // Route
   { path: 'get-started', component: GetStartedComponent },
-  { path: '', redirectTo: '/home', pathMatch: 'full'},
+  { path: 'event', loadChildren: './modules/event/event.module#EventModule' }, // lazy loading 
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
 ];
 

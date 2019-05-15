@@ -1,3 +1,9 @@
-<p>
-  event-form works!
-</p>
+<form [formGroup]="eventForm" (ngSubmit)="save()">
+  <mat-form-field>
+    <input matInput placeholder="Name..." name="name" formControlName="name">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Category..." name="category" formControlName="category">
+  </mat-form-field>
+  <button mat-raised-button color="primary" [disabled]="eventForm.invalid">OK</button>
+</form>

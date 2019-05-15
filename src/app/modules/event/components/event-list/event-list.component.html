@@ -1,3 +1,11 @@
-<p>
-  event-list works!
-</p>
+<div id="container">
+  <ng-container *ngIf="events else loading">
+    <app-event-card *ngFor="let e of $events | async" [event]="e"></app-event-card>
+  </ng-container>
+  <app-event-card *ngFor="let e of events" [event]="e">
+  </app-event-card>
+</div>
+
+<ng-template #loading>
+  <div>Loading...</div>
+</ng-template>
