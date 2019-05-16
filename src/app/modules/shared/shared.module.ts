@@ -1,21 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MaterialModule } from './material.module';
-import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ApiModule } from './api/api.module';
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
     MaterialModule,
-    HttpClientModule,
+    ApiModule,
     ReactiveFormsModule
   ],
   exports: [
     CommonModule,
     MaterialModule,
-    HttpClientModule,
+    ApiModule,
     ReactiveFormsModule
   ]
 })

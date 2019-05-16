@@ -1,11 +1,12 @@
 <div id="container">
-  <ng-container *ngIf="events else loading">
-    <app-event-card *ngFor="let e of $events | async" [event]="e"></app-event-card>
+  <!-- async pipe -->
+  <app-event-card *ngFor="let e of $events | async" [event]="e"></app-event-card>
+  <!-- ngIf template -->
+  <ng-container *ngIf="events.length > 0 else empty">
+    <app-event-card *ngFor="let e of events" [event]="e"></app-event-card>
   </ng-container>
-  <app-event-card *ngFor="let e of events" [event]="e">
-  </app-event-card>
 </div>
 
-<ng-template #loading>
-  <div>Loading...</div>
+<ng-template #empty>
+  <div>Empty List...</div>
 </ng-template>

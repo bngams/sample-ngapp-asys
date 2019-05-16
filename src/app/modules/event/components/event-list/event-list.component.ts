@@ -27,13 +27,13 @@ export class EventListComponent implements OnInit {
 
   loadEvents() {
     // get results manually
-    // let request: Observable<Event[]> = this.eventService.fetchEvents();
+    // let request: Observable<Event[]> = this.eventService.list();
     // request.subscribe(
     //   (data) => { this.events = data }
     // );
 
     // get observable directly 
-    this.$events = this.eventService.fetchEvents();
+    this.$events = this.eventService.list();
   }
 
 }
